@@ -34,3 +34,25 @@
 #trybewarts-forms-logo {
   height: 500px;
 }
+
+.nome-sobrenome {
+  display: flex;
+}
+
+.email-casa {
+  display: flex;
+}
+
+.family {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.container, .content1, .content2 {
+  display: flex;
+}

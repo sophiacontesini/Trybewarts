@@ -19,7 +19,47 @@
   </header>
   <main class="form-container">
     <form action="#" id="evaluation-form">
+      <div class="nome-sobrenome">
+        <input id="input-name" type="text" placeholder="Nome">
+        <input id="input-lastname" type="text" placeholder="Sobrenome">
+      </div>
+      <div class="email-casa">
+          <input id="input-email" type="email" placeholder="Email">
+        <p>Casa:</p>
+        <select name="house" id="house">
+          <option id="gitnoria-house" value="Gitnória">Gitnória</option>
+          <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
+          <option id="corvinode-house" value="Corvinode">Corvinode</option>
+          <option id="pytherina-house" value="Pytherina">Pytherina</option>
+        </select>
+      </div>
+      <hr>
       
+  <div class="container">
+    <div class="family">
+        <label for="family" id="label-family">"Qual sua família?"</label>
+        <label for="family"><input type="radio" name="family" value="Frontend">Frontend</label> 
+        <label for="family"><input type="radio" name="family" value="Backend">Backend</label> 
+        <label for="family"><input type="radio" name="family" value="FullStack">FullStack</label> 
+      </div>
+      <div class="content">
+        <label id="label-content" for="">"Qual conteúdo você está com mais vontade de aprender?"</label>
+          <div class="content1">
+            <label for=""><input type="checkbox" value="HoFs">HoFs</label>
+            <label for=""><input type="checkbox" value="Jest">Jest</label>
+            <label for=""><input type="checkbox" value="Promises">Promises</label>
+          </div>
+          <div class="content2"> 
+            <label for=""><input type="checkbox" value="React">React</label>
+            <label for=""><input type="checkbox" value="SQL">SQL</label>
+            <label for=""><input type="checkbox" value="Python">Python</label>
+        </div>
+      </div>
+    </div>
+      <hr>
+
+
+     
     </form>
     <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="trybewarts-logo">
   </main>
