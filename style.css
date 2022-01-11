@@ -9,9 +9,28 @@
   display: flex;
   background-color: rgb(50, 167, 145);
   height: 80px;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .trybewarts-login {
-display: flex;
+  display: flex;
+}
+
+.trybewarts-header-logo {
+  height: 70px;
+}
+
+.form-container {
+  display: flex;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+  flex-direction: column;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
 }
