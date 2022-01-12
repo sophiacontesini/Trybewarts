@@ -56,3 +56,8 @@
 .container .content1 .content2 {
   display: flex;
 }
+
+footer {
+  border: 1px solid black;
+  text-align: center;
+}

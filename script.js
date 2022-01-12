@@ -28,6 +28,18 @@ function validation() {
 
 login.addEventListener('click', validation);
 
+const check = document.getElementById('agreement');
+const btn = document.getElementById('submit-btn');
+
+function agree() {
+  if (check.checked === true) {
+    btn.removeAttribute('disabled');
+  } else {
+    btn.setAttribute('disabled', 'disabled');
+  }
+}
+check.addEventListener('click', agree)
+
 window.onload = function loading() {
   rateValue();
 };
