@@ -53,6 +53,6 @@
   flex-direction: column;
 }
 
-.container, .content1, .content2 {
+.container .content1 .content2 {
   display: flex;
 }

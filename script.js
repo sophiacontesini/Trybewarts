@@ -1,6 +1,22 @@
+const rate = document.querySelector('.rate');
+
+function rateValue() {
+  for (let i = 1; i <= 10; i += 1) {
+    const radio = document.createElement('input');
+    const span = document.createElement('span');
+    span.innerText = i;
+    radio.setAttribute('type', 'radio');
+    radio.value = i;
+    radio.name = 'rate';
+
+    rate.appendChild(radio);
+    rate.appendChild(span);
+  }
+}
+
+const email = document.querySelector('.email');
 const login = document.querySelector('.login');
 const senha = document.querySelector('.senha');
-const email = document.querySelector('.email');
 
 function validation() {
   if (email.value === 'tryber@teste.com' && senha.value === '123456') {
@@ -9,4 +25,9 @@ function validation() {
     alert('Email ou senha inválidos.');
   }
 }
+
 login.addEventListener('click', validation);
+
+window.onload = function loading() {
+  rateValue();
+};
