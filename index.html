@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trybewarts</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="header">
     <img class="trybewarts-header-logo" src="images/trybewarts-header-logo.svg" alt="trybewarts-logo">
     <h1 id="trybewarts-header-title">Trybewarts</h1>
     <form class="trybewarts-login"> 
-      <input class="email" type="email" name="email" placeholder="Email">
-      <input class="senha" type="password" name="password" placeholder="Senha">
+      <input class="email" size="12" type="email" name="email" placeholder="Email">
+      <input class="senha" size="12" type="password" name="password" placeholder="Senha">
       <button class="login">Entrar</button>
     </form>
   </header>
   <main class="form-container">
     <form action="#" id="evaluation-form">
+      <p class="title">Formulário de Avaliação</p>
       <div class="nome-sobrenome">
         <input id="input-name" type="text" placeholder="Nome">
         <input id="input-lastname" type="text" placeholder="Sobrenome">
@@ -43,7 +47,7 @@
         <label for="family"><input type="radio" name="family" value="FullStack">FullStack</label> 
       </div>
       <div class="content">
-        <label id="label-content" for="">"Qual conteúdo você está com mais vontade de aprender?"</label>
+        <label id="label-content" for="">Qual conteúdo você está com mais vontade de aprender?</label>
           <div class="content1">
             <label for=""><input type="checkbox" value="HoFs">HoFs</label>
             <label for=""><input type="checkbox" value="Jest">Jest</label>
@@ -68,6 +72,7 @@
       <br>
       <label id="label-infos" for="">Você concorda com o uso das informações acima?</label>
       <input id="agreement" type="checkbox">
+      <br>
       <button id="submit-btn" type="submit" disabled>Enviar</button>
     </div>
     </form>
