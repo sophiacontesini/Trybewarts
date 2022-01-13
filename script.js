@@ -38,7 +38,18 @@ function agree() {
     btn.setAttribute('disabled', 'disabled');
   }
 }
-check.addEventListener('click', agree)
+check.addEventListener('click', agree);
+
+const textArea = document.getElementById('textarea');
+const counter = document.getElementById('counter');
+counter.innerText = 500;
+
+const counterF = () => {
+  const count = textArea.value.split('').length;
+  counter.innerText = 500 - count;
+};
+
+textArea.addEventListener('keydown', counterF);
 
 window.onload = function loading() {
   rateValue();

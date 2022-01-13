@@ -57,7 +57,12 @@
   display: flex;
 }
 
-footer {
-  border: 1px solid black;
+footer {  
   text-align: center;
+  background-color: rgba(60,64,74,255);
+  color: rgb(236,235,235);
+}
+
+button {
+  background-color: rgba(78,44,131,255)
 }
