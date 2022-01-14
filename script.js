@@ -32,12 +32,12 @@ const check = document.getElementById('agreement');
 const btn = document.getElementById('submit-btn');
 
 const subject = () => {
-  const arr = ['HoFs', 'Jest', 'Promises', 'React', 'SQL', 'Python'];
-  
-  for(let i = 0; i < arr.length; i += 1){
-   if(arr[i] === document.querySelector('input[name="tech"]:checked').value){return arr[i]};
-   
+  const subjects = document.querySelectorAll('input[name="tech"]:checked');
+  const print = []
+  for(let i = 0; i < subjects.length; i += 1){
+    print.push(subjects[i].value)
   }
+  return print.join(', ')
   }
 
  btn.addEventListener('click', (event) => {
