@@ -31,6 +31,31 @@ login.addEventListener('click', validation);
 const check = document.getElementById('agreement');
 const btn = document.getElementById('submit-btn');
 
+const subject = () => {
+  const arr = ['HoFs', 'Jest', 'Promises', 'React', 'SQL', 'Python'];
+  
+  for(let i = 0; i < arr.length; i += 1){
+   if(arr[i] === document.querySelector('input[name="tech"]:checked').value){return arr[i]};
+   
+  }
+  }
+
+ btn.addEventListener('click', (event) => {
+   event.preventDefault();
+   const name = document.getElementById('input-name');
+   const lastName = document.getElementById('input-lastname');
+   const inputEmail = document.getElementById('input-email');
+   const house = document.getElementById('house');
+   const textArea = document.getElementById('textarea'); 
+   const form = document.getElementById('evaluation-form');
+
+   form.innerHTML = `<p>Nome: ${name.value} ${lastName.value} 
+   Email: ${inputEmail.value} Casa: ${house.value} 
+   Família: ${document.querySelector('input[name="family"]:checked').value} Matérias: ${subject()} 
+   Avaliação: ${document.querySelector('input[name="rate"]:checked').value} 
+   Observações: ${textArea.value}</p>`  
+ });
+
 function agree() {
   if (check.checked === true) {
     btn.removeAttribute('disabled');
@@ -44,12 +69,14 @@ const textArea = document.getElementById('textarea');
 const counter = document.getElementById('counter');
 counter.innerText = 500;
 
-const counterF = () => {
-  const count = textArea.value.split('').length;
-  counter.innerText = 500 - count;
+const counterF = (el) => {
+ counter.innerText = 500 - el.value.split('').length;
 };
 
-textArea.addEventListener('keydown', counterF);
+//https://pt.stackoverflow.com/questions/25753/como-fazer-um-contador-de-caracteres-de-uma-textarea
+textArea.addEventListener('input', () => counterF(textArea));
+
+
 
 window.onload = function loading() {
   rateValue();
