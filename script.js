@@ -1,5 +1,6 @@
 const rate = document.querySelector('.rate');
 
+// function para criar os radio buttons de avaliação
 function rateValue() {
   for (let i = 1; i <= 10; i += 1) {
     const radio = document.createElement('input');
@@ -18,6 +19,7 @@ const email = document.querySelector('.email');
 const login = document.querySelector('.login');
 const senha = document.querySelector('.senha');
 
+// function para validação de email e senha
 function validation() {
   if (email.value === 'tryber@teste.com' && senha.value === '123456') {
     alert('Olá, Tryber!');
@@ -31,6 +33,8 @@ login.addEventListener('click', validation);
 const check = document.getElementById('agreement');
 const btn = document.getElementById('submit-btn');
 
+// arrow function para pegar o valor das checkbox
+// join transforma array em string
 const subject = () => {
   const subjects = document.querySelectorAll('input[name="tech"]:checked');
   const print = [];
@@ -39,7 +43,7 @@ const subject = () => {
   }
   return print.join(', ');
 };
-
+// arrow function para o evento click resgatar os valores dos inputs
 btn.addEventListener('click', (event) => {
   event.preventDefault();
   const name = document.getElementById('input-name');
@@ -49,6 +53,7 @@ btn.addEventListener('click', (event) => {
   const textArea = document.getElementById('textarea');
   const form = document.getElementById('evaluation-form');
 
+  // método para limpar a tela e exibir os valores digitados nos inputs
   form.innerHTML = `<p>Nome: ${name.value} ${lastName.value} 
    Email: ${inputEmail.value} Casa: ${house.value} 
    Família: ${document.querySelector('input[name="family"]:checked').value} Matérias: ${subject()} 
@@ -56,6 +61,7 @@ btn.addEventListener('click', (event) => {
    Observações: ${textArea.value}</p>`;
 });
 
+// function para habilitar e desabilitar o botao enviar
 function agree() {
   if (check.checked === true) {
     btn.removeAttribute('disabled');
@@ -69,6 +75,7 @@ const textArea = document.getElementById('textarea');
 const counter = document.getElementById('counter');
 counter.innerText = 500;
 
+// arrow function que conta os caracteres decrescente e mostra na pág a contagem
 const counterF = (el) => {
   counter.innerText = 500 - el.value.split('').length;
 };
